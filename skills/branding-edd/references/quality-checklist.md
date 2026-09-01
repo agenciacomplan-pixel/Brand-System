@@ -19,6 +19,11 @@ Antes de finalizar uma peça ou direção visual, confirmar:
 - O enquadramento funciona no formato final?
 
 ## Formato
+- O formato/dimensão foi explicitado ou resolvido antes da criação?
+- Se o pedido era genérico, a dimensão foi perguntada em vez de inventada?
+- Feed do Instagram está em 4:5 por padrão quando não houver outra instrução?
+- Stories e capas de Reels estão em 9:16 por padrão quando não houver outra instrução?
+- Em capa de Reels, foi priorizado/perguntado um print ou frame do próprio vídeo antes de buscar outra foto, salvo quando o usuário já forneceu o frame ou disse que não quer usá-lo?
 - Feed, Reel, Story, thumbnail ou web respeitam áreas seguras e comportamento próprio?
 - Em capas de Reels, título e rosto continuam legíveis em miniatura?
 - Em web, a interface usa componentes e hierarquia próprios, sem imitar composição de post?
@@ -28,6 +33,6 @@ Antes de finalizar uma peça ou direção visual, confirmar:
 - As opções continuam reconhecíveis como a mesma marca?
 
 ## Repertório vivo
-- O índice foi checado antes da criação?
+- O estado diário foi consultado antes de decidir checar o Drive?
 - Se houve delta, ele foi classificado antes de alterar insights gerais?
 - Nenhuma referência isolada virou regra estrutural sem justificativa?
