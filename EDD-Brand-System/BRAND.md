@@ -12,6 +12,7 @@ Este Brand System existe para preservar reconhecimento de marca sem limitar a cr
 - Peças reais da EDD nas pastas de `Post` e `Capas de Reels`.
 - Logos oficiais no Google Drive.
 - Fotos reais de professores e grupos no Google Drive.
+- Pasta `Sala de Aprendizado`, tratada como repertório contextual fechado do módulo.
 - Site atual `https://dancalouvornaterra.com.br/` como referência provisória de conteúdo, negócio e estrutura, não como padrão visual definitivo.
 - Referências externas futuras, quando a respectiva pasta deixar de estar vazia.
 - Referências negativas futuras, quando a pasta `Peças que não gosto` deixar de estar vazia.
@@ -35,7 +36,7 @@ Não distribuir arquivos de fonte pelo repositório sem validação de licença.
 
 ### Linguagem visual
 
-A identidade histórica utiliza contraste alto, tipografia de impacto, fotografia recortada, cor forte, movimento e energia. Peças recentes podem ampliar essa linguagem com fundos claros, preto, branco, mockups, composições mais limpas e soluções contemporâneas.
+A identidade histórica utiliza contraste alto, tipografia de impacto, fotografia recortada, cor forte, movimento e energia. A análise das referências atuais confirma que a linguagem também admite fundos claros, preto, branco, mockups, cards, palavras em grande escala, fotografia dominante, composições editoriais e soluções promocionais.
 
 O manual antigo é fundamento, não prisão visual.
 
@@ -48,6 +49,7 @@ O manual antigo é fundamento, não prisão visual.
 5. **Variedade controlada**: diferentes famílias visuais podem coexistir, desde que respeitem o núcleo da marca.
 6. **Não infantilizar a marca por padrão**. Conteúdo jovem pode ser vibrante sem perder qualidade editorial.
 7. **Não copiar referência externa**. Extrair princípios, nunca reproduzir peças literalmente.
+8. **Classificar contexto antes de aprender**. Uma boa peça de campanha ou módulo específico não vira automaticamente regra geral da EDD.
 
 ## Direções criativas permitidas
 
@@ -77,6 +79,31 @@ As direções abaixo são categorias, não templates fixos.
 - Mais limpa e informativa.
 - Adequada para avisos, páginas de informação, certificados, área de membros e comunicação funcional.
 
+### 5. Promocional / produto
+
+- Mockups, cards de benefício, CTA e demonstração de produto digital ou material.
+- Pode usar fundos claros ou gradientes e maior densidade de informação organizada.
+
+### 6. Prova social
+
+- Depoimento ou mensagem como protagonista.
+- Card de leitura destacado sobre base de marca.
+
+## Sistemas contextuais
+
+### Sala de Aprendizado
+
+A Sala de Aprendizado é um módulo específico da EDD e **não é uma direção criativa geral**.
+
+- Só ativar quando o pedido mencionar explicitamente `Sala de Aprendizado` ou pertencer inequivocamente ao módulo.
+- Em pedidos genéricos, nunca oferecer essa linguagem como alternativa criativa.
+- Manter suas referências e evolução separadas do núcleo geral.
+- Consultar `guidelines/sala-de-aprendizado.md` quando o contexto estiver ativo.
+
+### Campanhas específicas
+
+Campanhas podem usar soluções temporárias fora do núcleo, como preto + verde neon em uma campanha `Black`. Essas soluções devem ser classificadas como contextuais e não promovidas automaticamente à identidade permanente.
+
 ## Regra para múltiplas opções
 
 Quando a usuária pedir mais de uma opção, gerar alternativas realmente distintas. Exemplo: uma opção fotográfica, uma editorial e uma de movimento. Não considerar troca de foto ou reposicionamento leve como uma nova direção criativa.
@@ -100,3 +127,5 @@ A pasta de referências externas está atualmente vazia. Não inventar direção
 ## Evolução do sistema
 
 Toda nova decisão relevante deve ser registrada em `docs/decisions.md`. Mudanças estruturais de marca devem atualizar este arquivo e, quando necessário, `DESIGN-TOKENS.json` e as guidelines específicas.
+
+A carga visual inicial foi consolidada em 31/08/2026. A partir dessa linha de base, a atualização deve ser incremental: checar metadados e analisar somente referências novas ou modificadas.
