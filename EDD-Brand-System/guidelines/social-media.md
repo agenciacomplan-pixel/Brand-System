@@ -8,17 +8,21 @@ Manter consistência de marca com variedade real de composição, sem reduzir a 
 
 1. Ler `../BRAND.md`.
 2. Ler `../references/reference-insights.md`.
-3. Checar `../references/reference-index.json` contra os metadados atuais do Drive.
-4. Se não houver delta, não reabrir referências já analisadas.
-5. Se houver delta, analisar apenas arquivos novos/modificados e classificá-los por contexto antes da criação.
+3. Consultar `../references/sync-state.json` antes de decidir se o Drive precisa ser checado.
+4. Se o Drive já foi checado hoje, não consultar novamente salvo gatilho explícito de atualização.
+5. Se houver checagem necessária, comparar o índice e analisar somente o delta.
+6. Resolver formato/dimensão antes da criação quando o pedido estiver genérico.
 
-## Formatos principais
+## Formatos principais e defaults
 
-- Feed vertical 4:5.
-- Quadrado 1:1 quando necessário.
-- Reels e stories 9:16.
-- Capas de Reels.
-- Thumbnails e banners promocionais.
+- Feed vertical do Instagram: `4:5`.
+- Carrossel de feed: `4:5` por página.
+- Quadrado `1:1` somente quando solicitado ou necessário.
+- Stories: `9:16`.
+- Capas de Reels: `9:16`.
+- Thumbnails e banners promocionais: confirmar destino/dimensão quando não estiver explícito.
+
+Se o usuário pedir apenas `post`, `arte`, `imagem` ou `peça` sem informar canal ou dimensão, perguntar o formato antes de criar.
 
 ## Feed
 
@@ -44,13 +48,27 @@ A EDD admite famílias visuais distintas no feed:
 
 ## Capas de Reels
 
+### Fonte visual prioritária
+
+Antes de buscar fotografia no Drive ou gerar uma nova imagem:
+
+1. verificar se o usuário já anexou um print/frame do próprio vídeo;
+2. se sim, priorizar esse frame como base da capa;
+3. se não, perguntar se ele tem um print/frame do vídeo que deseja usar;
+4. se o usuário disser que não tem ou preferir outra imagem, então selecionar fotografia real adequada da biblioteca EDD ou seguir a direção solicitada.
+
+A conexão visual com o conteúdo real do Reel tem prioridade sobre escolher automaticamente uma foto de banco/arquivo.
+
+### Regras visuais
+
+- formato padrão `9:16`;
 - trabalhar pensando em leitura em miniatura;
 - manter título curto, forte e em área segura;
 - priorizar terço superior ou centro seguro para o hook;
 - evitar informação essencial muito próxima das bordas;
 - pessoa/grupo deve permanecer reconhecível;
 - rosa/magenta pode destacar palavras ou blocos;
-- fundo pode ser vídeo/foto, preto, azul-marinho, roxo ou gradiente;
+- fundo pode ser frame do vídeo, foto, preto, azul-marinho, roxo ou gradiente;
 - CTA em cápsula inferior é permitido quando fizer sentido;
 - capa não precisa repetir o layout do feed.
 
