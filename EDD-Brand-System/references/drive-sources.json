@@ -13,11 +13,16 @@
     },
     "posts": {
       "folder_id": "1sjsb_ejKEOTI0psbc9yMf5M-q3TvugPx",
-      "role": "positive-live-reference"
+      "role": "positive-live-reference-general"
     },
     "reels_covers": {
       "folder_id": "1Zq904nAp4suVbm48Q3GcPe7nbKAcgfXU",
-      "role": "positive-live-reference"
+      "role": "positive-live-reference-general-with-context-filter"
+    },
+    "learning_room": {
+      "folder_id": "1hr2BM_xseZkPXQVqYrrVvN91EKa5q-Kf",
+      "role": "context-specific-reference-only",
+      "activation_rule": "Use only when the request explicitly mentions Sala de Aprendizado or clearly belongs to that module. Never use as a generic EDD creative direction."
     },
     "teachers": {
       "folder_id": "154LR94O6otRPfYF-b9K_arEustIJ2pmy",
@@ -38,6 +43,7 @@
     "mode": "incremental",
     "identity_key": ["file_id", "modified_time"],
     "reprocess_unchanged_files": false,
-    "analyze_new_or_modified_only": true
+    "analyze_new_or_modified_only": true,
+    "classify_context_before_promoting_to_general_rules": true
   }
 }
