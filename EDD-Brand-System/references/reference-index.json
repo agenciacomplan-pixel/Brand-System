@@ -1,0 +1,35 @@
+{
+  "brand": "EDD - Escola de Dança Louvor na Terra",
+  "schema_version": 1,
+  "baseline_created_at": "2026-08-31",
+  "sync_mode": "incremental",
+  "matching_rule": "Compare Drive file_id and modified_time. Reanalyze only files that are new or whose modified_time changed.",
+  "folders": {
+    "posts": {
+      "folder_id": "1sjsb_ejKEOTI0psbc9yMf5M-q3TvugPx",
+      "baseline_state": "contains-files"
+    },
+    "reels_covers": {
+      "folder_id": "1Zq904nAp4suVbm48Q3GcPe7nbKAcgfXU",
+      "baseline_state": "contains-files"
+    },
+    "logos": {
+      "folder_id": "1gmYUPp40Mt0dUch5tPRcjITu7zQkaPqY",
+      "baseline_state": "contains-files"
+    },
+    "teachers": {
+      "folder_id": "154LR94O6otRPfYF-b9K_arEustIJ2pmy",
+      "baseline_state": "contains-files"
+    },
+    "external_references": {
+      "folder_id": "1ehtdr3pe33xxzTeRKzWbuG6bhXccyBAK",
+      "baseline_state": "empty"
+    },
+    "negative_references": {
+      "folder_id": "1V-aRv9lvCHoakU9gv_VmfeDf2PcTlcD4",
+      "baseline_state": "empty"
+    }
+  },
+  "processed_files": {},
+  "note": "The baseline folder states are registered. As files are analyzed, record each file_id, modified_time, source folder, analysis date and status here. Do not reopen an unchanged processed file during normal creation workflows."
+}
