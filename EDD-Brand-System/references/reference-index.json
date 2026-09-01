@@ -4,32 +4,54 @@
   "baseline_created_at": "2026-08-31",
   "sync_mode": "incremental",
   "matching_rule": "Compare Drive file_id and modified_time. Reanalyze only files that are new or whose modified_time changed.",
+  "normal_creation_policy": "Do not reopen baseline-registered unchanged references. Use reference-insights.md unless a task explicitly requires a specific source image.",
   "folders": {
-    "posts": {
-      "folder_id": "1sjsb_ejKEOTI0psbc9yMf5M-q3TvugPx",
-      "baseline_state": "contains-files"
-    },
-    "reels_covers": {
-      "folder_id": "1Zq904nAp4suVbm48Q3GcPe7nbKAcgfXU",
-      "baseline_state": "contains-files"
-    },
-    "logos": {
-      "folder_id": "1gmYUPp40Mt0dUch5tPRcjITu7zQkaPqY",
-      "baseline_state": "contains-files"
-    },
-    "teachers": {
-      "folder_id": "154LR94O6otRPfYF-b9K_arEustIJ2pmy",
-      "baseline_state": "contains-files"
-    },
-    "external_references": {
-      "folder_id": "1ehtdr3pe33xxzTeRKzWbuG6bhXccyBAK",
-      "baseline_state": "empty"
-    },
-    "negative_references": {
-      "folder_id": "1V-aRv9lvCHoakU9gv_VmfeDf2PcTlcD4",
-      "baseline_state": "empty"
-    }
+    "posts": {"folder_id":"1sjsb_ejKEOTI0psbc9yMf5M-q3TvugPx","baseline_state":"contains-files","baseline_count":13},
+    "reels_covers": {"folder_id":"1Zq904nAp4suVbm48Q3GcPe7nbKAcgfXU","baseline_state":"contains-files","baseline_count":13},
+    "logos": {"folder_id":"1gmYUPp40Mt0dUch5tPRcjITu7zQkaPqY","baseline_state":"contains-files","baseline_count":5},
+    "teachers": {"folder_id":"154LR94O6otRPfYF-b9K_arEustIJ2pmy","baseline_state":"contains-subfolders"},
+    "external_references": {"folder_id":"1ehtdr3pe33xxzTeRKzWbuG6bhXccyBAK","baseline_state":"empty","baseline_count":0},
+    "negative_references": {"folder_id":"1V-aRv9lvCHoakU9gv_VmfeDf2PcTlcD4","baseline_state":"empty","baseline_count":0}
   },
-  "processed_files": {},
-  "note": "The baseline folder states are registered. As files are analyzed, record each file_id, modified_time, source folder, analysis date and status here. Do not reopen an unchanged processed file during normal creation workflows."
+  "baseline_files": {
+    "posts": [
+      {"file_id":"11LLJwSjJCzwEMbhKNjhOYf4DuHrSTOfo","modified_time":"2026-08-31T22:09:26.000Z"},
+      {"file_id":"1nw_jz8gX58f2BteXRqDpj26FNHesDKBE","modified_time":"2026-08-31T22:09:04.000Z"},
+      {"file_id":"1mJcvJ_9mAS4arz7m9teVszezrtaf0Qk_","modified_time":"2026-08-31T22:08:59.000Z"},
+      {"file_id":"1eWwPWTIKbagzCZbagNMN1E-kih_OHYM2","modified_time":"2026-08-31T22:08:53.000Z"},
+      {"file_id":"1pemUPzh2Nr0-xVDT10ISIuzhOdowljOL","modified_time":"2026-08-31T22:08:48.000Z"},
+      {"file_id":"1QH_Au5CjvGDE63fxOaUlfmBoeIs41J_z","modified_time":"2026-08-31T22:08:40.000Z"},
+      {"file_id":"1_fzv8Ng_7h6keuSiSEYaQ47SgHlgVgfm","modified_time":"2026-08-31T22:08:16.000Z"},
+      {"file_id":"1qCHlDkGnzEVFNwHWqcrA2l-79yq09uC6","modified_time":"2026-08-31T22:08:13.000Z"},
+      {"file_id":"1ZW3OEVrg1ExnXa6PuPqS1w_b3LIyagtQ","modified_time":"2026-08-31T22:07:56.000Z"},
+      {"file_id":"1UW_QCMlbKAeohqiHy5NVWvTsZWhGWaRd","modified_time":"2026-08-31T22:07:55.000Z"},
+      {"file_id":"1dgTUePIL7g9nsGvyagpwssd3fUHNKV4t","modified_time":"2026-08-31T22:07:53.000Z"},
+      {"file_id":"1gycvYeb55wo3RYwX3JUlfWDodkUZNNzE","modified_time":"2026-08-31T22:07:40.000Z"},
+      {"file_id":"1c6gA9R8LRbA3_A67aNet1al-MZDD8334","modified_time":"2026-08-31T22:07:31.000Z"}
+    ],
+    "reels_covers": [
+      {"file_id":"1aZjXazYTfxmlN-cVGYfmd_lq-7E2n5sq","modified_time":"2026-08-31T22:08:41.000Z"},
+      {"file_id":"1xajD4NXRdpHPDPzFrk8lwzu9tgu6yfv-","modified_time":"2026-08-31T22:06:31.000Z"},
+      {"file_id":"1_rq-6ifBkBdZ0Qcaes6ieFJ89yy3dOOE","modified_time":"2026-08-31T22:06:17.000Z"},
+      {"file_id":"15EUPicquPXt-kSPIzP1akzupeWPjp901","modified_time":"2026-08-31T22:06:15.000Z"},
+      {"file_id":"1dfgeqfJ_pLEi9LcnTKR-Kq54fkH7SDa0","modified_time":"2026-08-31T22:06:13.000Z"},
+      {"file_id":"1pqUFiaEiLROEz-51caPRO_uKf__AnxGC","modified_time":"2026-08-31T22:06:09.000Z"},
+      {"file_id":"1mhVCKnFnRfVuZDsJTF8XfdGevaRIiU8h","modified_time":"2026-08-31T22:06:08.000Z"},
+      {"file_id":"1P6plDqtEOf2IEL66mwy7s7Mdeza6DYbU","modified_time":"2026-08-31T22:06:06.000Z"},
+      {"file_id":"1G0kMWAWoJMFpQ45cX_qoY8ptkX4MExUT","modified_time":"2026-08-31T22:06:04.000Z"},
+      {"file_id":"1kKoZZvM4iJEPV63fIfeBSyvXNbBRbI7e","modified_time":"2026-08-31T22:06:01.000Z"},
+      {"file_id":"1pivw81Wgi1REDLzuFuam3CHNHIuNPP91","modified_time":"2026-08-31T22:05:55.000Z"},
+      {"file_id":"1bTF6ZtUThQw1Hw4hcWg6HL6eP71hSK59","modified_time":"2026-08-31T22:05:53.000Z"},
+      {"file_id":"1CRhx0v20OGcWX3hxqWF7Ybn2xnQUJsL9","modified_time":"2026-08-31T22:05:52.000Z"}
+    ],
+    "logos": [
+      {"file_id":"1cYYKK7BiDVaFx_hYDbbwAXMlPbgPT07N","modified_time":"2026-08-31T22:15:57.000Z"},
+      {"file_id":"13Z_23_Pb-Dz5yoDpx3ByzszUBsHMuheI","modified_time":"2026-08-31T22:15:57.000Z"},
+      {"file_id":"1GMzvEAt7XZ9qCdn2ROGzcZI_CnUnOzYG","modified_time":"2026-08-31T22:15:57.000Z"},
+      {"file_id":"1T1zQ9s3ZAX3Oy8H7kjsvPmYBQxfXpOFU","modified_time":"2026-08-31T22:15:57.000Z"},
+      {"file_id":"1sW2jl2U-lolAbj3HQZUBidNFp5FuVqnL","modified_time":"2026-08-31T22:15:57.000Z"}
+    ]
+  },
+  "status": "baseline-registered",
+  "note": "This index makes current Drive items the baseline. Future checks should compare metadata first and only inspect new/modified files. Specific old files may still be opened when a task explicitly requires their exact content."
 }
