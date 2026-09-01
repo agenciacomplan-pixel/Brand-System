@@ -1,0 +1,51 @@
+{
+  "brand": {
+    "name": "EDD - Escola de Dança Louvor na Terra",
+    "status": "initial-consolidation"
+  },
+  "colors": {
+    "primary": {
+      "navy": "#0E0F3E",
+      "pink": "#F52CAB",
+      "lime": "#A0FF00"
+    },
+    "support": {
+      "white": "#FFFFFF",
+      "black": "#000000"
+    }
+  },
+  "typography": {
+    "display": {
+      "family": "Gilroy ExtraBold",
+      "source": "historical-brand-manual",
+      "web_fallback": ["Arial Black", "Arial", "sans-serif"]
+    },
+    "body": {
+      "family": "Open Sans",
+      "source": "historical-brand-manual",
+      "web_fallback": ["Arial", "sans-serif"]
+    }
+  },
+  "creative": {
+    "directions": [
+      "impact-photographic",
+      "editorial",
+      "movement",
+      "institutional"
+    ],
+    "multiple_options_must_be_materially_distinct": true,
+    "copy_external_reference": false
+  },
+  "references": {
+    "update_mode": "incremental",
+    "identity_key": ["file_id", "modified_time"],
+    "reprocess_unchanged_files": false,
+    "empty_folder_policy": "insufficient-evidence"
+  },
+  "web": {
+    "current_site_role": "temporary-content-and-business-reference",
+    "current_site_is_visual_standard": false,
+    "responsive_required": true,
+    "accessibility_required": true
+  }
+}
