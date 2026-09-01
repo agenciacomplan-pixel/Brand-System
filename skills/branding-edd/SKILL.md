@@ -27,9 +27,10 @@ Usar o Brand System vivo da **EDD - Escola de Dança Louvor na Terra** como font
    - `docs/decisions.md` somente quando houver dúvida de governança ou evolução de marca.
 
 3. **Aplicar a janela de checagem diária antes de consultar o Drive.**
+   - Ler primeiro `EDD-Brand-System/references/sync-state.json`.
    - Usar a data de `America/Sao_Paulo` como referência do dia.
-   - Se `last_drive_check_date` em `sync-state.json` for igual à data atual, **não consultar o Google Drive novamente naquele dia**. Usar `reference-insights.md` e o estado já consolidado.
-   - Forçar nova checagem no mesmo dia somente quando o usuário disser ou implicar claramente que adicionou, removeu ou alterou referências/assets no Drive, pedir explicitamente uma nova checagem/sincronização, ou quando uma tarefa depender de um arquivo específico recém-adicionado.
+   - Se `last_drive_check_date` for igual à data atual, **não consultar o Google Drive novamente naquele dia**. Usar `reference-index.json` + `reference-insights.md` já consolidados.
+   - Forçar nova checagem no mesmo dia somente quando o usuário disser ou implicar claramente que adicionou, removeu ou alterou referências/assets no Drive, pedir explicitamente uma nova checagem/sincronização, ou quando uma tarefa depender de um arquivo específico recém-enviado.
    - Se `last_drive_check_date` for diferente da data atual ou estiver vazio, fazer a checagem normal do Drive.
    - Na checagem normal, usar `references/drive-sources.json` e `reference-index.json`, comparar `file_id` + `modified_time` e analisar somente arquivos novos ou modificados.
    - Após uma checagem bem-sucedida, atualizar `sync-state.json` com a data atual e, se possível, o horário da checagem.
@@ -53,7 +54,19 @@ Usar o Brand System vivo da **EDD - Escola de Dança Louvor na Terra** como font
    - Registrar decisões estruturais em `docs/decisions.md`.
    - Se a conta atual não tiver permissão de escrita no GitHub, usar o delta na tarefa atual e informar claramente que a sincronização central ficou pendente. Nunca afirmar que atualizou quando não atualizou.
 
-6. **Criar ou revisar a peça.**
+6. **Resolver o briefing mínimo antes de criar.**
+   - Se o pedido visual estiver genérico e não informar formato, canal ou dimensão, perguntar **qual dimensão/formato o usuário quer** antes de gerar a peça. Fazer uma pergunta curta, sem iniciar a criação ainda.
+   - Não perguntar de novo quando o formato já estiver explícito ou puder ser inferido com segurança pelo canal.
+   - Defaults da EDD para social:
+     - feed do Instagram: `4:5`;
+     - carrossel de feed: `4:5` por página;
+     - Stories: `9:16`;
+     - capa de Reels: `9:16`.
+   - Se o usuário disser apenas “post”, “arte”, “imagem”, “peça” ou equivalente sem canal/dimensão, perguntar o formato desejado.
+   - Para banners, anúncios, thumbnails, apresentações ou web sem destino/tamanho claro, perguntar o formato/destino relevante em vez de inventar dimensões.
+   - **Capa de Reels:** antes de buscar uma foto no banco/Drive ou gerar imagem, perguntar se o usuário tem um print/frame do próprio vídeo que deseja usar na capa. Se já houver um frame anexado na conversa, priorizá-lo e não perguntar novamente. Se o usuário disser que não tem ou preferir outra imagem, então selecionar fotografia real adequada no Drive ou seguir a direção solicitada.
+
+7. **Criar ou revisar a peça.**
    - Aplicar a guideline do formato e os insights consolidados.
    - Priorizar reconhecimento de marca sem repetir um único template.
    - Quando o usuário pedir várias opções, produzir direções visualmente distintas, não pequenas variações do mesmo layout.
@@ -84,7 +97,7 @@ Não transformar linguagem de campanha em identidade permanente. Exemplos já re
 
 ## Criação de imagem
 
-Quando a tarefa pedir uma imagem, usar a ferramenta de geração/edição de imagem disponível no ambiente após carregar as regras da marca e resolver os assets relevantes. Não tentar reproduzir visualmente uma referência externa de forma literal; extrair princípios de composição e direção.
+Antes de chamar a ferramenta de geração/edição de imagem, cumprir o briefing mínimo de formato/dimensão acima. Quando a tarefa pedir uma imagem, usar a ferramenta disponível no ambiente após carregar as regras da marca e resolver os assets relevantes. Não tentar reproduzir visualmente uma referência externa de forma literal; extrair princípios de composição e direção.
 
 ## Web e site
 
@@ -93,7 +106,7 @@ Para site, landing page ou interface:
 - Ler `guidelines/web.md`.
 - Tratar o site atual `https://dancalouvornaterra.com.br/` como referência provisória de conteúdo, negócio e estrutura, não como padrão visual definitivo.
 - Aplicar o núcleo da EDD em tipografia, fotografia, cor e hierarquia sem transformar o site em um “post gigante”.
-- Quando novas referências web forem aprovadas no Drive, incorporá-las pelo fluxo incremental na próxima checagem necessária ou imediatamente se o usuário informar a atualização.
+- Quando novas referências web forem aprovadas no Drive, incorporá-las pelo fluxo incremental antes de definir novas regras.
 
 ## Referências negativas e externas
 
@@ -108,8 +121,7 @@ Esta Skill é projetada para uso compartilhado no workspace.
 
 - Não depender de memória pessoal de uma única conta.
 - Toda regra importante deve estar no Brand System central, não apenas na conversa.
-- Cada usuário precisa ter acesso aos conectores/fontes necessários para leitura.
-- Para compartilhar o estado de checagem diária entre chats e contas, a integração que executar a primeira checagem do dia precisa conseguir atualizar `references/sync-state.json` no GitHub.
+- Cada usuário precisa ter acesso aos conectores/fontes necessários para leitura. Para compartilhar o estado de checagem diária entre chats e contas, a integração que executar a primeira checagem do dia precisa conseguir atualizar `references/sync-state.json` no GitHub.
 - Se GitHub ou Drive não estiverem acessíveis, informar a limitação e não inventar branding, referências ou atualizações.
 
 ## Exemplos de acionamento
@@ -119,10 +131,10 @@ Esta Skill é projetada para uso compartilhado no workspace.
 - “Crie uma peça da Sala de Aprendizado com a professora X.”
 - “Monte a home do novo site da EDD seguindo o Brand System.”
 - “Revise esta arte e diga o que está fora do branding da EDD.”
-- “Subi novas referências no Drive. Atualize o repertório e crie a próxima peça.”
 
 ## Recursos da Skill
 
+- Ler `references/briefing-policy.md` quando o pedido visual estiver incompleto ou envolver capa de Reels.
 - Ler `references/daily-sync-policy.md` para a regra de cache diário e gatilhos de rechecagem.
 - Ler `references/source-map.md` quando precisar localizar as fontes atuais e entender a lógica de transferência do repositório.
 - Ler `references/quality-checklist.md` antes de finalizar uma peça ou uma recomendação visual complexa.
