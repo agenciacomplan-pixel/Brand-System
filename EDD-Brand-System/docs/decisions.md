@@ -50,6 +50,16 @@
 - Quando a checagem for necessária, continua valendo a análise apenas por delta usando `file_id` + `modified_time`.
 - Para o estado diário funcionar entre chats e contas do workspace, a execução que fizer a primeira checagem do dia deve conseguir atualizar `sync-state.json` no GitHub.
 
+## 2026-08-31 - Briefing mínimo de peças sociais
+
+- Pedidos visuais genéricos devem resolver canal, formato e dimensão antes da criação.
+- Se o formato já estiver explícito ou puder ser inferido com segurança pelo canal, não repetir perguntas.
+- Default para feed do Instagram e carrossel: `4:5`.
+- Default para Stories e capas de Reels: `9:16`.
+- Para capa de Reels, priorizar um print/frame do próprio vídeo. Se nenhum frame estiver disponível na conversa, perguntar se o usuário possui um antes de buscar fotografia no Drive ou gerar outra imagem.
+- Se o usuário não tiver frame ou preferir outra direção, usar fotografia real apropriada da biblioteca EDD ou a solução solicitada.
+- Evitar perguntas redundantes quando a informação já estiver disponível na conversa.
+
 ## Próximas decisões futuras
 
 Registrar aqui, com data, qualquer mudança em paleta, tipografia, direção visual, web, fotografia, logo, módulos contextuais ou processo de atualização de referências.
