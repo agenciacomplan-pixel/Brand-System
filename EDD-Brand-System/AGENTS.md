@@ -11,6 +11,19 @@ Escopo: tudo dentro de `EDD-Brand-System/` pertence à **EDD - Escola de Dança 
 5. Consulte `references/sync-state.json` antes de decidir se o Google Drive precisa ser checado.
 6. Consulte `references/reference-index.json` quando houver checagem necessária ou quando a tarefa depender de uma referência específica.
 
+## Briefing mínimo antes de criar
+
+- Se o pedido visual estiver genérico e não informar canal, formato ou dimensão, perguntar qual formato/dimensão o usuário quer antes da criação.
+- Não repetir a pergunta quando o formato já estiver explícito ou puder ser inferido com segurança.
+- Defaults sociais da EDD:
+  - feed do Instagram: `4:5`;
+  - carrossel de feed: `4:5` por página;
+  - Stories: `9:16`;
+  - capa de Reels: `9:16`.
+- Se o usuário disser apenas `post`, `arte`, `imagem`, `peça` ou equivalente sem canal/dimensão, perguntar o formato.
+- Para banner, thumbnail, apresentação, anúncio ou web sem destino/tamanho claro, perguntar o destino/formato relevante em vez de inventar dimensão.
+- Para **capa de Reels**, antes de buscar fotografia no Drive ou gerar outra imagem, verificar se existe um print/frame do vídeo na conversa. Se não existir, perguntar se o usuário tem um print/frame do vídeo que deseja usar. Se ele disser que não tem ou preferir outra imagem, então selecionar fotografia adequada da biblioteca EDD ou seguir a direção solicitada.
+
 ## Regra de checagem diária do Drive
 
 Usar a data de `America/Sao_Paulo`.
