@@ -1,0 +1,43 @@
+{
+  "brand": "EDD - Escola de Dança Louvor na Terra",
+  "root_folder": "https://drive.google.com/drive/folders/17G5OWGdbW1p4a1FidR6tJ6tcYCSxEtnV",
+  "sources": {
+    "brand_manual": {
+      "type": "pdf",
+      "id": "1ewTD4NTc639sJF227c1G439p1nCxJCwp",
+      "role": "historical-foundation"
+    },
+    "logos": {
+      "folder_id": "1gmYUPp40Mt0dUch5tPRcjITu7zQkaPqY",
+      "role": "official-logo-assets"
+    },
+    "posts": {
+      "folder_id": "1sjsb_ejKEOTI0psbc9yMf5M-q3TvugPx",
+      "role": "positive-live-reference"
+    },
+    "reels_covers": {
+      "folder_id": "1Zq904nAp4suVbm48Q3GcPe7nbKAcgfXU",
+      "role": "positive-live-reference"
+    },
+    "teachers": {
+      "folder_id": "154LR94O6otRPfYF-b9K_arEustIJ2pmy",
+      "role": "real-person-photo-library"
+    },
+    "external_references": {
+      "folder_id": "1ehtdr3pe33xxzTeRKzWbuG6bhXccyBAK",
+      "role": "future-external-reference",
+      "current_state": "empty"
+    },
+    "negative_references": {
+      "folder_id": "1V-aRv9lvCHoakU9gv_VmfeDf2PcTlcD4",
+      "role": "future-negative-reference",
+      "current_state": "empty"
+    }
+  },
+  "sync_policy": {
+    "mode": "incremental",
+    "identity_key": ["file_id", "modified_time"],
+    "reprocess_unchanged_files": false,
+    "analyze_new_or_modified_only": true
+  }
+}
