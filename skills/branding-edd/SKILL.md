@@ -1,6 +1,6 @@
 ---
 name: branding-edd
-description: Aplica e mantém o Brand System da EDD (Escola de Dança Louvor na Terra) em posts, capas de Reels, anúncios, páginas, sites, apresentações e outras peças visuais. Use quando o usuário pedir algo “no branding da EDD”, “no estilo da EDD”, mencionar EDD/Escola de Dança Louvor na Terra, Sala de Aprendizado, professor da EDD, ou solicitar criação/revisão visual que deva seguir a marca. Coordena GitHub + Google Drive, verifica referências novas por delta e preserva contextos fechados como Sala de Aprendizado.
+description: Aplica e mantém o Brand System da EDD (Escola de Dança Louvor na Terra) em posts, capas de Reels, anúncios, páginas, sites, apresentações e outras peças visuais. Use quando o usuário pedir algo “no branding da EDD”, “no estilo da EDD”, mencionar EDD/Escola de Dança Louvor na Terra, Sala de Aprendizado, professor da EDD, ou solicitar criação/revisão visual que deva seguir a marca. Coordena GitHub + Google Drive, usa checagem diária compartilhada para evitar consultas repetidas, verifica referências novas por delta e preserva contextos fechados como Sala de Aprendizado.
 ---
 
 # Branding EDD
@@ -22,14 +22,18 @@ Usar o Brand System vivo da **EDD - Escola de Dança Louvor na Terra** como font
    - `EDD-Brand-System/DESIGN-TOKENS.json`
    - a guideline específica do formato solicitado
    - `EDD-Brand-System/references/reference-insights.md`
-   - `EDD-Brand-System/references/reference-index.json`
+   - `EDD-Brand-System/references/sync-state.json`
+   - `EDD-Brand-System/references/reference-index.json` somente quando houver checagem necessária ou quando a tarefa depender de uma referência específica
    - `docs/decisions.md` somente quando houver dúvida de governança ou evolução de marca.
 
-3. **Checar o repertório vivo antes de criar.**
-   - Usar `references/drive-sources.json` e `reference-index.json` para localizar as pastas monitoradas no Google Drive.
-   - Comparar `file_id` + `modified_time`.
-   - Se não houver delta, **não reabrir referências visuais já analisadas**.
-   - Se houver arquivo novo ou modificado, analisar somente esse delta antes da criação.
+3. **Aplicar a janela de checagem diária antes de consultar o Drive.**
+   - Usar a data de `America/Sao_Paulo` como referência do dia.
+   - Se `last_drive_check_date` em `sync-state.json` for igual à data atual, **não consultar o Google Drive novamente naquele dia**. Usar `reference-insights.md` e o estado já consolidado.
+   - Forçar nova checagem no mesmo dia somente quando o usuário disser ou implicar claramente que adicionou, removeu ou alterou referências/assets no Drive, pedir explicitamente uma nova checagem/sincronização, ou quando uma tarefa depender de um arquivo específico recém-adicionado.
+   - Se `last_drive_check_date` for diferente da data atual ou estiver vazio, fazer a checagem normal do Drive.
+   - Na checagem normal, usar `references/drive-sources.json` e `reference-index.json`, comparar `file_id` + `modified_time` e analisar somente arquivos novos ou modificados.
+   - Após uma checagem bem-sucedida, atualizar `sync-state.json` com a data atual e, se possível, o horário da checagem.
+   - Nunca reabrir referências visuais inalteradas apenas para confirmar o estado.
 
 4. **Classificar o delta antes de aprender com ele.**
    Classificar cada referência nova/modificada como uma destas categorias:
@@ -41,6 +45,7 @@ Usar o Brand System vivo da **EDD - Escola de Dança Louvor na Terra** como font
    - `asset-only`
 
 5. **Atualizar o sistema quando houver permissão.**
+   - Após checar o Drive, atualizar `sync-state.json` para que outros chats e contas do workspace possam reutilizar a checagem do mesmo dia.
    - Atualizar `reference-index.json` com o novo estado.
    - Atualizar `reference-insights.md` com aprendizados condensados relevantes.
    - Não promover uma referência isolada a regra estrutural de `BRAND.md` automaticamente.
@@ -88,7 +93,7 @@ Para site, landing page ou interface:
 - Ler `guidelines/web.md`.
 - Tratar o site atual `https://dancalouvornaterra.com.br/` como referência provisória de conteúdo, negócio e estrutura, não como padrão visual definitivo.
 - Aplicar o núcleo da EDD em tipografia, fotografia, cor e hierarquia sem transformar o site em um “post gigante”.
-- Quando novas referências web forem aprovadas no Drive, incorporá-las pelo fluxo incremental antes de definir novas regras.
+- Quando novas referências web forem aprovadas no Drive, incorporá-las pelo fluxo incremental na próxima checagem necessária ou imediatamente se o usuário informar a atualização.
 
 ## Referências negativas e externas
 
@@ -103,7 +108,8 @@ Esta Skill é projetada para uso compartilhado no workspace.
 
 - Não depender de memória pessoal de uma única conta.
 - Toda regra importante deve estar no Brand System central, não apenas na conversa.
-- Cada usuário precisa ter acesso aos conectores/fontes necessários para leitura; escrita no GitHub é necessária apenas para sincronizar o delta central.
+- Cada usuário precisa ter acesso aos conectores/fontes necessários para leitura.
+- Para compartilhar o estado de checagem diária entre chats e contas, a integração que executar a primeira checagem do dia precisa conseguir atualizar `references/sync-state.json` no GitHub.
 - Se GitHub ou Drive não estiverem acessíveis, informar a limitação e não inventar branding, referências ou atualizações.
 
 ## Exemplos de acionamento
@@ -113,8 +119,10 @@ Esta Skill é projetada para uso compartilhado no workspace.
 - “Crie uma peça da Sala de Aprendizado com a professora X.”
 - “Monte a home do novo site da EDD seguindo o Brand System.”
 - “Revise esta arte e diga o que está fora do branding da EDD.”
+- “Subi novas referências no Drive. Atualize o repertório e crie a próxima peça.”
 
 ## Recursos da Skill
 
+- Ler `references/daily-sync-policy.md` para a regra de cache diário e gatilhos de rechecagem.
 - Ler `references/source-map.md` quando precisar localizar as fontes atuais e entender a lógica de transferência do repositório.
 - Ler `references/quality-checklist.md` antes de finalizar uma peça ou uma recomendação visual complexa.
