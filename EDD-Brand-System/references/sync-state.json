@@ -1,0 +1,15 @@
+{
+  "brand": "EDD - Escola de Dança Louvor na Terra",
+  "timezone": "America/Sao_Paulo",
+  "last_drive_check_date": "2026-08-31",
+  "last_drive_check_at": null,
+  "last_check_reason": "initial-visual-analysis-and-baseline",
+  "policy": "one-drive-change-check-per-day-unless-forced",
+  "force_recheck_signals": [
+    "user says a reference or image was uploaded/added/changed/removed",
+    "user says teacher photos or assets were updated",
+    "user asks to update the repertoire",
+    "user explicitly asks to sync or check Drive again",
+    "task depends on a specific newly added file"
+  ]
+}
