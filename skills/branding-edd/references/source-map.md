@@ -17,6 +17,8 @@ Arquivos principais:
 - `EDD-Brand-System/references/drive-sources.json`
 - `EDD-Brand-System/references/reference-index.json`
 - `EDD-Brand-System/references/reference-insights.md`
+- `EDD-Brand-System/references/sync-state.json`
+- `EDD-Brand-System/references/daily-sync-policy.md`
 - `EDD-Brand-System/docs/decisions.md`
 
 ## Google Drive
@@ -28,12 +30,14 @@ Não duplicar a biblioteca inteira dentro da Skill. Usar as pastas e IDs documen
 
 ## Regra de sincronização
 
-A chave de comparação é:
+Antes de consultar o Drive, ler `sync-state.json`. Se a última checagem foi feita na data atual em `America/Sao_Paulo`, não consultar o Drive novamente, salvo gatilho explícito de rechecagem.
+
+Quando a checagem for necessária, comparar:
 - `file_id`
 - `modified_time`
 
 Sem mudança: usar insights consolidados e não reabrir imagens.
-Com mudança: analisar somente o delta, classificar o contexto, atualizar índice/insights quando houver permissão e só depois criar.
+Com mudança: analisar somente o delta, classificar o contexto, atualizar índice/insights e `sync-state.json` quando houver permissão e só depois criar.
 
 ## Transferência futura
 
