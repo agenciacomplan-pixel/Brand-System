@@ -17,6 +17,13 @@ Escopo: tudo dentro de `EDD-Brand-System/` pertence à **EDD - Escola de Dança 
 - Atualize `reference-index.json` e `reference-insights.md` antes de iniciar a nova criação.
 - Não transformar uma referência isolada em regra estrutural automaticamente.
 
+## Sala de Aprendizado: contexto fechado
+
+- **Sala de Aprendizado é um módulo específico da EDD, não uma direção criativa geral da marca.**
+- Elementos, padrões, layouts, selos, nomenclaturas ou linguagem visual identificados como pertencentes à Sala de Aprendizado só podem ser usados quando o pedido mencionar explicitamente `Sala de Aprendizado` ou deixar inequívoco que a peça pertence a esse módulo.
+- Ao analisar referências existentes, classificar peças de Sala de Aprendizado separadamente e não usá-las para inferir regras gerais de posts, anúncios, capas ou páginas da EDD.
+- Em um pedido genérico da EDD, nunca escolher a linguagem da Sala de Aprendizado como uma das opções criativas por conta própria.
+
 ## Seleção de pessoas
 
 - Conteúdo sobre professor específico: usar fotos reais da pasta correspondente.
