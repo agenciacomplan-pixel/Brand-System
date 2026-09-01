@@ -1,15 +1,18 @@
 {
   "brand": "EDD - Escola de Dança Louvor na Terra",
-  "schema_version": 1,
+  "schema_version": 2,
   "baseline_created_at": "2026-08-31",
+  "initial_visual_analysis_completed_at": "2026-08-31",
   "sync_mode": "incremental",
   "matching_rule": "Compare Drive file_id and modified_time. Reanalyze only files that are new or whose modified_time changed.",
-  "normal_creation_policy": "Do not reopen baseline-registered unchanged references. Use reference-insights.md unless a task explicitly requires a specific source image.",
+  "normal_creation_policy": "Use consolidated reference-insights.md. Do not reopen analyzed unchanged references unless the task explicitly requires a specific source image.",
+  "context_classification_required": true,
   "folders": {
-    "posts": {"folder_id":"1sjsb_ejKEOTI0psbc9yMf5M-q3TvugPx","baseline_state":"contains-files","baseline_count":13},
-    "reels_covers": {"folder_id":"1Zq904nAp4suVbm48Q3GcPe7nbKAcgfXU","baseline_state":"contains-files","baseline_count":13},
-    "logos": {"folder_id":"1gmYUPp40Mt0dUch5tPRcjITu7zQkaPqY","baseline_state":"contains-files","baseline_count":5},
-    "teachers": {"folder_id":"154LR94O6otRPfYF-b9K_arEustIJ2pmy","baseline_state":"contains-subfolders"},
+    "posts": {"folder_id":"1sjsb_ejKEOTI0psbc9yMf5M-q3TvugPx","baseline_state":"contains-files","baseline_count":13,"baseline_visual_analysis":"complete","default_context":"general-edd"},
+    "reels_covers": {"folder_id":"1Zq904nAp4suVbm48Q3GcPe7nbKAcgfXU","baseline_state":"contains-files","baseline_count":13,"baseline_visual_analysis":"complete","default_context":"general-edd-with-context-filter"},
+    "learning_room": {"folder_id":"1hr2BM_xseZkPXQVqYrrVvN91EKa5q-Kf","baseline_state":"contains-files","baseline_count":3,"baseline_visual_analysis":"complete","default_context":"sala-de-aprendizado-only"},
+    "logos": {"folder_id":"1gmYUPp40Mt0dUch5tPRcjITu7zQkaPqY","baseline_state":"contains-files","baseline_count":5,"analysis_basis":"brand-manual-plus-asset-metadata"},
+    "teachers": {"folder_id":"154LR94O6otRPfYF-b9K_arEustIJ2pmy","baseline_state":"contains-subfolders","role":"asset-library-not-creative-reference"},
     "external_references": {"folder_id":"1ehtdr3pe33xxzTeRKzWbuG6bhXccyBAK","baseline_state":"empty","baseline_count":0},
     "negative_references": {"folder_id":"1V-aRv9lvCHoakU9gv_VmfeDf2PcTlcD4","baseline_state":"empty","baseline_count":0}
   },
@@ -19,19 +22,19 @@
       {"file_id":"1nw_jz8gX58f2BteXRqDpj26FNHesDKBE","modified_time":"2026-08-31T22:09:04.000Z"},
       {"file_id":"1mJcvJ_9mAS4arz7m9teVszezrtaf0Qk_","modified_time":"2026-08-31T22:08:59.000Z"},
       {"file_id":"1eWwPWTIKbagzCZbagNMN1E-kih_OHYM2","modified_time":"2026-08-31T22:08:53.000Z"},
-      {"file_id":"1pemUPzh2Nr0-xVDT10ISIuzhOdowljOL","modified_time":"2026-08-31T22:08:48.000Z"},
+      {"file_id":"1pemUPzh2Nr0-xVDT10ISIuzhOdowljOL","modified_time":"2026-08-31T22:08:48.000Z","context":"campaign-black"},
       {"file_id":"1QH_Au5CjvGDE63fxOaUlfmBoeIs41J_z","modified_time":"2026-08-31T22:08:40.000Z"},
-      {"file_id":"1_fzv8Ng_7h6keuSiSEYaQ47SgHlgVgfm","modified_time":"2026-08-31T22:08:16.000Z"},
+      {"file_id":"1_fzv8Ng_7h6keuSiSEYaQ47SgHlgVgfm","modified_time":"2026-08-31T22:08:16.000Z","context":"promotional-product"},
       {"file_id":"1qCHlDkGnzEVFNwHWqcrA2l-79yq09uC6","modified_time":"2026-08-31T22:08:13.000Z"},
       {"file_id":"1ZW3OEVrg1ExnXa6PuPqS1w_b3LIyagtQ","modified_time":"2026-08-31T22:07:56.000Z"},
       {"file_id":"1UW_QCMlbKAeohqiHy5NVWvTsZWhGWaRd","modified_time":"2026-08-31T22:07:55.000Z"},
       {"file_id":"1dgTUePIL7g9nsGvyagpwssd3fUHNKV4t","modified_time":"2026-08-31T22:07:53.000Z"},
       {"file_id":"1gycvYeb55wo3RYwX3JUlfWDodkUZNNzE","modified_time":"2026-08-31T22:07:40.000Z"},
-      {"file_id":"1c6gA9R8LRbA3_A67aNet1al-MZDD8334","modified_time":"2026-08-31T22:07:31.000Z"}
+      {"file_id":"1c6gA9R8LRbA3_A67aNet1al-MZDD8334","modified_time":"2026-08-31T22:07:31.000Z","context":"commemorative"}
     ],
     "reels_covers": [
       {"file_id":"1aZjXazYTfxmlN-cVGYfmd_lq-7E2n5sq","modified_time":"2026-08-31T22:08:41.000Z"},
-      {"file_id":"1xajD4NXRdpHPDPzFrk8lwzu9tgu6yfv-","modified_time":"2026-08-31T22:06:31.000Z"},
+      {"file_id":"1xajD4NXRdpHPDPzFrk8lwzu9tgu6yfv-","modified_time":"2026-08-31T22:06:31.000Z","context":"sala-de-aprendizado"},
       {"file_id":"1_rq-6ifBkBdZ0Qcaes6ieFJ89yy3dOOE","modified_time":"2026-08-31T22:06:17.000Z"},
       {"file_id":"15EUPicquPXt-kSPIzP1akzupeWPjp901","modified_time":"2026-08-31T22:06:15.000Z"},
       {"file_id":"1dfgeqfJ_pLEi9LcnTKR-Kq54fkH7SDa0","modified_time":"2026-08-31T22:06:13.000Z"},
@@ -44,6 +47,11 @@
       {"file_id":"1bTF6ZtUThQw1Hw4hcWg6HL6eP71hSK59","modified_time":"2026-08-31T22:05:53.000Z"},
       {"file_id":"1CRhx0v20OGcWX3hxqWF7Ybn2xnQUJsL9","modified_time":"2026-08-31T22:05:52.000Z"}
     ],
+    "learning_room": [
+      {"file_id":"1C2Z3LTvx8iYY1hGtmWLR-55-Qskbylvi","modified_time":"2026-08-31T22:09:32.000Z","context":"sala-de-aprendizado"},
+      {"file_id":"1IjM1CxuyiFqhBNnk89nBVAOsNcuORM4I","modified_time":"2026-08-31T22:08:36.000Z","context":"sala-de-aprendizado"},
+      {"file_id":"1xHbv5y_92PdN7INI0kjfM4YA_-Y0kH6O","modified_time":"2026-08-31T22:07:49.000Z","context":"sala-de-aprendizado","duplicate_visual_of_reels_file_id":"1xajD4NXRdpHPDPzFrk8lwzu9tgu6yfv-"}
+    ],
     "logos": [
       {"file_id":"1cYYKK7BiDVaFx_hYDbbwAXMlPbgPT07N","modified_time":"2026-08-31T22:15:57.000Z"},
       {"file_id":"13Z_23_Pb-Dz5yoDpx3ByzszUBsHMuheI","modified_time":"2026-08-31T22:15:57.000Z"},
@@ -52,6 +60,6 @@
       {"file_id":"1sW2jl2U-lolAbj3HQZUBidNFp5FuVqnL","modified_time":"2026-08-31T22:15:57.000Z"}
     ]
   },
-  "status": "baseline-registered",
-  "note": "This index makes current Drive items the baseline. Future checks should compare metadata first and only inspect new/modified files. Specific old files may still be opened when a task explicitly requires their exact content."
+  "status": "initial-visual-analysis-complete",
+  "next_run_behavior": "Metadata check first. Analyze only delta. Classify context before updating general insights."
 }
