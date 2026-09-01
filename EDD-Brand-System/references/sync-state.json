@@ -1,9 +1,9 @@
 {
   "brand": "EDD - Escola de Dança Louvor na Terra",
   "timezone": "America/Sao_Paulo",
-  "last_drive_check_date": "2026-08-31",
-  "last_drive_check_at": null,
-  "last_check_reason": "initial-visual-analysis-and-baseline",
+  "last_drive_check_date": "2026-09-01",
+  "last_drive_check_at": "2026-09-01T00:03:29-03:00",
+  "last_check_reason": "daily-metadata-check-no-delta",
   "policy": "one-drive-change-check-per-day-unless-forced",
   "force_recheck_signals": [
     "user says a reference or image was uploaded/added/changed/removed",
