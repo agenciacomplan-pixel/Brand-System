@@ -8,9 +8,21 @@ Escopo: tudo dentro de `EDD-Brand-System/` pertence à **EDD - Escola de Dança 
 2. Leia `DESIGN-TOKENS.json`.
 3. Leia somente a guideline relevante ao formato solicitado.
 4. Leia `references/reference-insights.md`.
-5. Consulte `references/reference-index.json` e compare os metadados das pastas vivas no Google Drive.
+5. Consulte `references/sync-state.json` antes de decidir se o Google Drive precisa ser checado.
+6. Consulte `references/reference-index.json` quando houver checagem necessária ou quando a tarefa depender de uma referência específica.
 
-## Regra obrigatória de sincronização
+## Regra de checagem diária do Drive
+
+Usar a data de `America/Sao_Paulo`.
+
+- Se `references/sync-state.json` indicar que o Drive já foi checado na data atual, NÃO consultar o Drive novamente naquele dia.
+- Reutilizar `reference-index.json` e `reference-insights.md` nas demais criações do mesmo dia.
+- Forçar nova checagem no mesmo dia somente se o usuário disser que adicionou, removeu ou alterou referências/assets, pedir explicitamente nova sincronização/checagem ou se a tarefa depender de um arquivo recém-adicionado.
+- Na primeira checagem necessária do dia, comparar `file_id` + `modified_time` e analisar somente o delta.
+- Após checagem bem-sucedida, atualizar `sync-state.json` para compartilhar o estado entre chats e contas do workspace.
+- Nunca reabrir imagens inalteradas apenas para confirmar que continuam iguais.
+
+## Regra obrigatória de sincronização quando houver checagem
 
 - Se nenhum `file_id` novo aparecer e nenhum `modified_time` mudar, NÃO reabra as imagens antigas.
 - Se houver arquivo novo ou modificado, analise somente esse delta.
@@ -42,7 +54,7 @@ Enquanto não houver novas referências de site aprovadas, usar o site atual ape
 
 ## Pastas sem conteúdo
 
-`Peças que não gosto` e `Referências Externas` estavam vazias na linha de base inicial. Se passarem a conter arquivos, isso é delta prioritário e deve ser analisado antes da próxima criação visual.
+`Peças que não gosto` e `Referências Externas` estavam vazias na linha de base inicial. Se passarem a conter arquivos, isso é delta prioritário e deve ser analisado na próxima checagem do Drive ou imediatamente quando o usuário informar a mudança.
 
 ## Integridade da marca
 
