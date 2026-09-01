@@ -41,6 +41,15 @@
 - Uma peça que também aparece em `Capas de Reels` foi classificada como `Sala de Aprendizado`, e essa classificação contextual prevalece sobre o uso como referência geral.
 - Amarelo vivo e a arquitetura específica de gradiente/nome do módulo não foram promovidos à identidade geral da EDD.
 
+## 2026-08-31 - Checagem diária do Drive
+
+- Para reduzir chamadas e consumo desnecessário de contexto, a EDD passa a fazer no máximo uma checagem automática de mudanças no Google Drive por dia, usando `America/Sao_Paulo`.
+- O estado compartilhado fica em `references/sync-state.json`.
+- Se o Drive já foi checado no dia, novos pedidos de criação reutilizam os insights consolidados e não consultam novamente as pastas do Drive.
+- A regra é anulada no mesmo dia quando o usuário informar que subiu, alterou ou removeu referências/assets, pedir atualização do repertório ou sincronização, ou quando a tarefa depender de um arquivo recém-adicionado.
+- Quando a checagem for necessária, continua valendo a análise apenas por delta usando `file_id` + `modified_time`.
+- Para o estado diário funcionar entre chats e contas do workspace, a execução que fizer a primeira checagem do dia deve conseguir atualizar `sync-state.json` no GitHub.
+
 ## Próximas decisões futuras
 
 Registrar aqui, com data, qualquer mudança em paleta, tipografia, direção visual, web, fotografia, logo, módulos contextuais ou processo de atualização de referências.
